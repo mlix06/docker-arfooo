@@ -5,6 +5,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 USER www-data
+RUN mkdir -p /var/www/html
 VOLUME /var/www/html
 WORKDIR /var/www/html
 
