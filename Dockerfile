@@ -1,10 +1,9 @@
-FROM ubuntu:trusty
+FROM mlixon/docker-apache2-php
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get -yq install \
-        curl \
-		zip \
-  vim && \
+        zip && \
     rm -rf /var/lib/apt/lists/*
+
 USER www-data
 WORKDIR /var/www/html
 
