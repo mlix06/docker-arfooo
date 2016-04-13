@@ -4,7 +4,7 @@ RUN apt-get update && \
         zip && \
     rm -rf /var/lib/apt/lists/*
 
-USER www-data
+USER 1000
 RUN mkdir -p /var/www/html
 VOLUME /var/www/html
 WORKDIR /var/www/html
