@@ -6,8 +6,6 @@ RUN apt-get update && \
 
 USER 1000
 RUN mkdir -p /var/www/html
-VOLUME /var/www/html
-WORKDIR /var/www/html
 
 RUN curl -L  http://www.e-dir.fr/arfooo_ultimate/arfooo_ultimate.zip > /var/www/html/arfooo_ultimate.zip && \
     unzip /var/www/html/arfooo_ultimate.zip -d /var/www/html/ && \
