@@ -14,4 +14,11 @@ RUN curl -L  http://www.e-dir.fr/arfooo_ultimate/arfooo_ultimate.zip > /var/www/
     rm -rf  /var/www/html/arfooo\ ultimate/* && \
     rm -rf  /var/www/html/arfooo\ ultimate/
 
+RUN echo "Options +FollowSymlinks \n\
+	RewriteEngine On \n\
+	RewriteBase / \n\
+	RewriteCond %{REQUEST_FILENAME} !-f \n\
+	RewriteCond %{REQUEST_FILENAME} !-d \n\
+	RewriteRule ^(.+)$ index.php" > /var/www/html/.htaccess
+
 USER root
