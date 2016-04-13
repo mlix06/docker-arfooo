@@ -15,3 +15,5 @@ RUN curl -L  http://www.e-dir.fr/arfooo_ultimate/arfooo_ultimate.zip > /var/www/
     rm /var/www/html/arfooo_ultimate.zip && \
     rm -rf  /var/www/html/arfooo\ ultimate/* && \
     rm -rf  /var/www/html/arfooo\ ultimate/
+
+USER root
